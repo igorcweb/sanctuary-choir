@@ -1,6 +1,9 @@
 $("#palmSunday").collapse("show");
 
+$("a.palm-sunday").addClass("active");
 $("a.palm-sunday").on("click", function() {
+  $("a").removeClass("active");
+  $(this).addClass("active");
   const pannelsToCollapse = $(".collapse");
   $("#holyThursday").collapse("hide");
   $("#goodFriday").collapse("hide");
@@ -10,6 +13,8 @@ $("a.palm-sunday").on("click", function() {
 });
 
 $("a.holy-thursday").on("click", function() {
+  $("a").removeClass("active");
+  $(this).addClass("active");
   $("#palmSunday").collapse("hide");
   $("#goodFriday").collapse("hide");
   $("#easterVigil").collapse("hide");
@@ -18,6 +23,8 @@ $("a.holy-thursday").on("click", function() {
 });
 
 $("a.good-friday").on("click", function() {
+  $("a").removeClass("active");
+  $(this).addClass("active");
   $("#palmSunday").collapse("hide");
   $("#holyThursday").collapse("hide");
   $("#easterVigil").collapse("hide");
@@ -26,6 +33,8 @@ $("a.good-friday").on("click", function() {
 });
 
 $("a.easter-vigil").on("click", function() {
+  $("a").removeClass("active");
+  $(this).addClass("active");
   $("#palmSunday").collapse("hide");
   $("#holyThursday").collapse("hide");
   $("#goodFriday").collapse("hide");
@@ -34,6 +43,8 @@ $("a.easter-vigil").on("click", function() {
 });
 
 $("a.easter-sunday").on("click", function() {
+  $("a").removeClass("active");
+  $(this).addClass("active");
   $("#palmSunday").collapse("hide");
   $("#holyThursday").collapse("hide");
   $("#easterVigil").collapse("hide");
