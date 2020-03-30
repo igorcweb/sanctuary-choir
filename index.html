@@ -36,52 +36,27 @@
   <body>
     <h1 class="ml-4 ml-sm-0 mb-4">Sanctuary Choir</h1>
     <div class="buttons mb-2">
-      <a
-        class="btn btn-danger mb-3 ml-4 ml-sm-2 palm-sunday"
-        href="#palmSunday"
-        role="button"
-        aria-expanded="false"
-        aria-controls="palmSunday"
+      <a class="btn btn-danger mb-3 ml-4 ml-sm-2 palm-sunday text-white"
         >Palm Sunday</a
       >
 
-      <a
-        class="btn btn-danger mb-3 ml-4 ml-sm-2 holy-thursday"
-        href="#holyThursday"
-        role="button"
-        aria-expanded="false"
-        aria-controls="palmSunday"
+      <a class="btn btn-danger mb-3 ml-4 ml-sm-2 holy-thursday text-white"
         >Holy Thursday</a
       >
-      <a
-        class="btn btn-danger mb-3 ml-4 ml-sm-2 good-friday"
-        href="#goodFriday"
-        role="button"
-        aria-expanded="false"
-        aria-controls="goodFriday"
+      <a class="btn btn-danger mb-3 ml-4 ml-sm-2 good-friday text-white"
         >Good Friday</a
       >
-      <a
-        class="btn btn-danger mb-3 ml-4 ml-sm-2 easter-vigil"
-        href="#easterVigil"
-        role="button"
-        aria-expanded="false"
-        aria-controls="easterVigil"
+      <a class="btn btn-danger mb-3 ml-4 ml-sm-2 easter-vigil text-white"
         >Easter Vigil</a
       >
-      <a
-        class="btn btn-danger mb-3 ml-4 ml-sm-2 easter-sunday"
-        href="#easterSunday"
-        role="button"
-        aria-expanded="false"
-        aria-controls="easterSunday"
+      <a class="btn btn-danger mb-3 ml-4 ml-sm-2 easter-sunday text-white"
         >Easter Sunday</a
       >
     </div>
 
     <div class="row">
       <div class="col">
-        <div class="collapse palm-sunday multi-collapse" id="palmSunday">
+        <div class="palm-sunday" id="palmSunday">
           <div class="mb-4">
             <h4 class="ml-4 ml-sm-2">
               All Glory Laud and Honor
@@ -140,114 +115,149 @@
 
     <div class="row">
       <div class="col">
-        <div class="collapse holy-thursday multi-collapse" id="holyThursday">
-          <h4 class="ml-4 ml-sm-2">STAY TUNED FOR HOLY THURSDAY</h4>
-          <!-- <div class="mb-4">
+        <div class="holy-thursday d-none" id="holyThursday">
+          <div class="mb-4">
             <h4 class="ml-4 ml-sm-2">
-              All Glory Laud and Honor
+              Lift High the Cross
             </h4>
-
-            <audio controls title="All Glory Laud and Honor" class="mb-2">
+            <audio controls title="Lift High the Cross" class="mb-2">
               <source
-                src="./palm-sunday/AllGloryLaudeAndHonor.m4a"
+                src="./audio/holy-thursday/LiftHighttheCross.m4a"
                 type="audio/mp4"
               />
               Your browser does not support the audio element.
             </audio>
           </div>
           <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">Only This I Want</h4>
-            <audio controls title="Only This I Want" class="mb-2">
-              <source src="./palm-sunday/OnlyThisIWant.m4a" type="audio/mp4" />
+            <h4 class="ml-4 ml-sm-2">
+              Ubi Caritas (Gregorian Chant)
+            </h4>
+            <audio controls title="Ubi Caritas" class="mb-2">
+              <source
+                src="./audio/holy-thursday/UbiCaritas.m4a"
+                type="audio/mp4"
+              />
               Your browser does not support the audio element.
             </audio>
           </div>
           <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">Ave Verum</h4>
+            <h4 class="ml-4 ml-sm-2">
+              Donde Hay Caridad
+            </h4>
+            <audio controls title="Donde Hay Caridad" class="mb-2">
+              <source
+                src="./audio/holy-thursday/DondeHayCaridad.m4a"
+                type="audio/mp4"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="mb-4">
+            <h4 class="ml-4 ml-sm-2">
+              So You Must Do
+            </h4>
+            <audio controls title="So You Must Do" class="mb-2">
+              <source
+                src="./audio/holy-thursday/SoYouMusDo.m4a"
+                type="audio/mp4"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="mb-4">
+            <h4 class="ml-4 ml-sm-2">
+              How Beautiful
+            </h4>
+            <audio controls title="How Beautiful" class="mb-2">
+              <source
+                src="./audio/holy-thursday/HowBeautiful.m4a"
+                type="audio/mp4"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="mb-4">
+            <h4 class="ml-4 ml-sm-2">
+              Amen el Cuerpo de Cristo
+            </h4>
+            <audio controls title="Amen el Cuerpo de Cristo" class="mb-2">
+              <source
+                src="./audio/holy-thursday/AmenelCuerpodeCristo.m4a"
+                type="audio/mp4"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="good-friday d-none" id="goodFriday">
+          <div class="mb-4">
+            <h4 class="ml-4 ml-sm-2">
+              For God So Loved the World
+            </h4>
+            <audio controls title="For God So Loved the World" class="mb-2">
+              <source
+                src="./audio/good-friday/ForGodSoLovedtheWorld.m4a"
+                type="audio/mp4"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="mb-4">
+            <h4 class="ml-4 ml-sm-2">
+              Adoro Te Devote
+            </h4>
+            <audio controls title="Adoro Te Devote" class="mb-2">
+              <source
+                src="./audio/good-friday/AdoroTeDevote.m4a"
+                type="audio/mp4"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+          <div class="mb-4">
+            <h4 class="ml-4 ml-sm-2">
+              Ave Verum
+            </h4>
             <audio controls title="Ave Verum" class="mb-2">
-              <source src="./palm-sunday/AveVerum.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">We Remember</h4>
-            <audio controls title="We Remember" class="mb-2">
-              <source src="./palm-sunday/WeRemember.m4a" type="audio/mp4" />
+              <source src="./audio/palm-sunday/AveVerum.m4a" type="audio/mp4" />
               Your browser does not support the audio element.
             </audio>
           </div>
           <div class="mb-4">
             <h4 class="ml-4 ml-sm-2">
-              Jerusalem, My Destiny
+              O Sacred Head
             </h4>
-            <audio controls title="Jerusalem, My Destiny" class="mb-2">
+            <audio controls title="O Sacred Head" class="mb-2">
               <source
-                src="./palm-sunday/JerusalemMyDestiny.m4a"
+                src="./audio/good-friday/OSacredHead.m4a"
                 type="audio/mp4"
               />
               Your browser does not support the audio element.
             </audio>
-          </div> -->
+          </div>
+          <div class="mb-4">
+            <h4 class="ml-4 ml-sm-2">
+              Lamb of God
+            </h4>
+            <audio controls title="Lamb of God" class="mb-2">
+              <source
+                src="./audio/good-friday/LambofGod.m4a"
+                type="audio/mp4"
+              />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="row">
       <div class="col">
-        <div class="collapse good-friday multi-collapse" id="goodFriday">
-          <h4 class="ml-4 ml-sm-2">STAY TUNED FOR GOOD FRIDAY</h4>
-          <!-- <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">
-              All Glory Laud and Honor
-            </h4>
-
-            <audio controls title="All Glory Laud and Honor" class="mb-2">
-              <source
-                src="./palm-sunday/AllGloryLaudeAndHonor.m4a"
-                type="audio/mp4"
-              />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">Only This I Want</h4>
-            <audio controls title="Only This I Want" class="mb-2">
-              <source src="./palm-sunday/OnlyThisIWant.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">Ave Verum</h4>
-            <audio controls title="Ave Verum" class="mb-2">
-              <source src="./palm-sunday/AveVerum.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">We Remember</h4>
-            <audio controls title="We Remember" class="mb-2">
-              <source src="./palm-sunday/WeRemember.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">
-              Jerusalem, My Destiny
-            </h4>
-            <audio controls title="Jerusalem, My Destiny" class="mb-2">
-              <source
-                src="./palm-sunday/JerusalemMyDestiny.m4a"
-                type="audio/mp4"
-              />
-              Your browser does not support the audio element.
-            </audio>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="collapse easter-vigil multi-collapse" id="easterVigil">
+        <div class="d-none easter-vigil" id="easterVigil">
           <h4 class="ml-4 ml-sm-2">STAY TUNED FOR EASTER VIGIL</h4>
           <!-- <div class="mb-4">
             <h4 class="ml-4 ml-sm-2">
@@ -300,60 +310,7 @@
     </div>
     <div class="row">
       <div class="col">
-        <div class="collapse easter-vigil multi-collapse" id="easterVigil">
-          <h4 class="ml-4 ml-sm-2">STAY TUNNED FOR Easter Vigil ...</h4>
-          <!-- <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">
-              All Glory Laud and Honor
-            </h4>
-
-            <audio controls title="All Glory Laud and Honor" class="mb-2">
-              <source
-                src="./palm-sunday/AllGloryLaudeAndHonor.m4a"
-                type="audio/mp4"
-              />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">Only This I Want</h4>
-            <audio controls title="Only This I Want" class="mb-2">
-              <source src="./palm-sunday/OnlyThisIWant.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">Ave Verum</h4>
-            <audio controls title="Ave Verum" class="mb-2">
-              <source src="./palm-sunday/AveVerum.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">We Remember</h4>
-            <audio controls title="We Remember" class="mb-2">
-              <source src="./palm-sunday/WeRemember.m4a" type="audio/mp4" />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-          <div class="mb-4">
-            <h4 class="ml-4 ml-sm-2">
-              Jerusalem, My Destiny
-            </h4>
-            <audio controls title="Jerusalem, My Destiny" class="mb-2">
-              <source
-                src="./palm-sunday/JerusalemMyDestiny.m4a"
-                type="audio/mp4"
-              />
-              Your browser does not support the audio element.
-            </audio>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <div class="collapse easter-sunday multi-collapse" id="easterSunday">
+        <div class="easter-sunday d-none" id="easterSunday">
           <h4 class="ml-4 ml-sm-2">STAY TUNED FOR EASTER SUNDAY</h4>
           <!-- <div class="mb-4">
             <h4 class="ml-4 ml-sm-2">
