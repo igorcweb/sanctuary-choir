@@ -4,7 +4,8 @@ body {
   background-color: #9370db;
 }
 
-audio {
+audio,
+iframe {
   max-width: 92%;
   width: 500px;
   display: block;
@@ -26,7 +27,8 @@ a {
     margin-left: 0 !important;
   }
 
-  audio {
+  audio,
+  iframe {
     margin-left: 0;
   }
 }
