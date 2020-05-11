@@ -56,6 +56,13 @@ $("a.easter-4").on("click", function () {
   $("#easter-4").removeClass("d-none");
 });
 
+$("a.easter-5").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#easter-5").removeClass("d-none");
+});
+
 $("a.corpus-christi").on("click", function () {
   $("a").removeClass("active");
   $(this).addClass("active");
