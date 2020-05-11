@@ -69,3 +69,10 @@ $("a.corpus-christi").on("click", function () {
   $(".music").addClass("d-none");
   $("#corpus-christi").removeClass("d-none");
 });
+
+$("a.mothers-day").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#mothers-day").removeClass("d-none");
+});
