@@ -83,3 +83,10 @@ $("a.mothers-day").on("click", function () {
   $(".music").addClass("d-none");
   $("#mothers-day").removeClass("d-none");
 });
+
+$("a.ascension").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ascension").removeClass("d-none");
+});
