@@ -97,3 +97,15 @@ $("a.pentecost").on("click", function () {
   $(".music").addClass("d-none");
   $("#pentecost").removeClass("d-none");
 });
+$("a.first-communion").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#first-communion").removeClass("d-none");
+});
+$("a.holy-trinity").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#holy-trinity").removeClass("d-none");
+});
