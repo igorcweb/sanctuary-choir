@@ -109,3 +109,9 @@ $("a.holy-trinity").on("click", function () {
   $(".music").addClass("d-none");
   $("#holy-trinity").removeClass("d-none");
 });
+$("a.ota-12").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ota-12").removeClass("d-none");
+});
