@@ -127,3 +127,9 @@ $("a.ota-14").on("click", function () {
   $(".music").addClass("d-none");
   $("#ota-14").removeClass("d-none");
 });
+$("a.ota-15").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ota-15").removeClass("d-none");
+});
