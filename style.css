@@ -1,8 +1,11 @@
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   margin-top: 1rem;
   margin-bottom: 1rem;
   background-color: #9370db;
-  overflow-x: hidden;
 }
 
 audio,
