@@ -1,21 +1,22 @@
 {
-  "name": "teens-choir",
+  "name": "sanctuary-choir",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/igorcweb/teens-choir.git"
+    "url": "git+https://github.com/igorcweb/coro-sanctuary-choir.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/igorcweb/teens-choir/issues"
+    "url": "https://github.com/igorcweb/sanctuary-choir/issues"
   },
-  "homepage": "https://github.com/igorcweb/teens-choir"
+  "homepage": "https://igorcweb.github.io/sanctuary-choir",
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }
