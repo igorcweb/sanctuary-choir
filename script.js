@@ -145,3 +145,16 @@ $("a.ota-17").on("click", function () {
   $(".music").addClass("d-none");
   $("#ota-17").removeClass("d-none");
 });
+
+$("a.ota-22").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ota-22").removeClass("d-none");
+});
+$("a.school").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#school").removeClass("d-none");
+});
