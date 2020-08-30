@@ -158,3 +158,9 @@ $("a.school").on("click", function () {
   $(".music").addClass("d-none");
   $("#school").removeClass("d-none");
 });
+$("a.ota-23").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ota-23").removeClass("d-none");
+});
