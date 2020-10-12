@@ -188,6 +188,12 @@ $("a.ota-28").on("click", function () {
   $(".music").addClass("d-none");
   $("#ota-28").removeClass("d-none");
 });
+$("a.ota-29").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ota-29").removeClass("d-none");
+});
 $("a.ota-30").on("click", function () {
   $("a").removeClass("active");
   $(this).addClass("active");
