@@ -200,3 +200,9 @@ $("a.ota-30").on("click", function () {
   $(".music").addClass("d-none");
   $("#ota-30").removeClass("d-none");
 });
+$("a.all-saints").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#all-saints").removeClass("d-none");
+});
