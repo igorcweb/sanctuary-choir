@@ -206,3 +206,15 @@ $("a.all-saints").on("click", function () {
   $(".music").addClass("d-none");
   $("#all-saints").removeClass("d-none");
 });
+$("a.ota-32").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ota-32").removeClass("d-none");
+});
+$("a.ota-33").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ota-33").removeClass("d-none");
+});
