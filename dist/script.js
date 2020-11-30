@@ -218,3 +218,21 @@ $("a.ota-33").on("click", function () {
   $(".music").addClass("d-none");
   $("#ota-33").removeClass("d-none");
 });
+$("a.advent-1").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#advent-1").removeClass("d-none");
+});
+$("a.advent-2").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#advent-2").removeClass("d-none");
+});
+$("a.ic").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ic").removeClass("d-none");
+});
