@@ -236,3 +236,9 @@ $("a.ic").on("click", function () {
   $(".music").addClass("d-none");
   $("#ic").removeClass("d-none");
 });
+$("a.advent-3").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#advent-3").removeClass("d-none");
+});
