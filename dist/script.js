@@ -27,5 +27,19 @@ $("a.ev").on("click", function () {
   $("#ev").removeClass("d-none");
 });
 
+$("a.ht").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#ht").removeClass("d-none");
+});
+
+$("a.gf").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#gf").removeClass("d-none");
+});
+
 
 
