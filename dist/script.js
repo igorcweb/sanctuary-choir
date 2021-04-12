@@ -20,13 +20,6 @@ $("a.mp").on("click", function () {
 });
 
 
-$("a.ev").on("click", function () {
-  $("a").removeClass("active");
-  $(this).addClass("active");
-  $(".music").addClass("d-none");
-  $("#ev").removeClass("d-none");
-});
-
 $("a.e3").on("click", function () {
   $("a").removeClass("active");
   $(this).addClass("active");
