@@ -1,44 +1,40 @@
-$("a.lm").on("click", function () {
-  $("a").removeClass("active");
-  $(this).addClass("active");
-  $(".music").addClass("d-none");
-  $("#lm").removeClass("d-none");
-});
 
-$("a.mp").on("click", function () {
-  $("a").removeClass("active");
-  $(this).addClass("active");
-  $(".music").addClass("d-none");
-  $("#mp").removeClass("d-none");
-});
 
-$("a.e6").on("click", function () {
-  $("a").removeClass("active");
-  $(this).addClass("active");
-  $(".music").addClass("d-none");
-  $("#e6").removeClass("d-none");
-});
+function activate() {
+  $.each($('.selection'), function (i, selection) {
+    if ($(selection).hasClass('active')) {
+      $(selection).find('.fa-hand-pointer-o').addClass('d-none')
+      $(selection).find('.fa-check').removeClass('d-none')
+    }
+  })
+}
 
-$("a.asc").on("click", function () {
-  $("a").removeClass("active");
-  $(this).addClass("active");
-  $(".music").addClass("d-none");
-  $("#asc").removeClass("d-none");
-});
+activate();
 
-$("a.pentecost").on("click", function () {
+$('.selection').on('click', function () {
   $("a").removeClass("active");
   $(this).addClass("active");
+  $('.selection').find('.fa-hand-pointer-o').removeClass('d-none')
+  $('.selection').find('.fa-check').addClass('d-none')
+  activate();
   $(".music").addClass("d-none");
-  $("#pentecost").removeClass("d-none");
-});
+  if ($(this).hasClass('trinity')) {
+    $("#trinity").removeClass("d-none");
+  } else if ($(this).hasClass('mp')) {
+    $("#mp").removeClass("d-none");
+  }
+  else if ($(this).hasClass('pentecost')) {
+    $("#pentecost").removeClass("d-none");
+  }
+})
 
-$("a.trinity").on("click", function () {
-  $("a").removeClass("active");
-  $(this).addClass("active");
-  $(".music").addClass("d-none");
-  $("#trinity").removeClass("d-none");
-});
+$(document).on('mouseover', '.selection', function () {
+  $(this).find('.fa-hand-pointer-o').addClass('hover');
+})
+
+$(document).on('mouseout', '.selection', function () {
+  $(this).find('.fa-hand-pointer-o').removeClass('hover');
+})
 
 
 
