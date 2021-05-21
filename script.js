@@ -33,6 +33,14 @@ $("a.pentecost").on("click", function () {
   $("#pentecost").removeClass("d-none");
 });
 
+$("a.trinity").on("click", function () {
+  $("a").removeClass("active");
+  $(this).addClass("active");
+  $(".music").addClass("d-none");
+  $("#trinity").removeClass("d-none");
+});
+
+
 
 
 
