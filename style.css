@@ -25,13 +25,13 @@ audio {
 
 .selection {
   position: relative;
-  padding-left: 2.5rem !important;
+  padding-left: 2.5rem;
 }
 
 .fa {
-  position: absolute !important;
-  left: .6rem;;
-  top: 50%;;
+  position: absolute;
+  left: .6rem;
+  top: 50%;
   transform: translateY(-50%);
 }
 
