@@ -28,9 +28,15 @@
 <body>
   <h1 class="text-center text-sm-left ml-sm-3 mb-4">Sanctuary Choir</h1>
   <div class="buttons mb-2 text-center text-sm-left ">
-    <a class="selection btn btn-lg btn-danger mb-3 mx-4 mb-4 mp text-white shadow-sm" style="width: fit-content"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><i class="fa fa-check d-none" aria-hidden="true"></i>Misa Pacem</a>
-    <a class="selection btn btn-lg btn-danger mb-3 mx-4 mb-4 pentecost text-white shadow-sm active" style="width: fit-content"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><i class="fa fa-check d-none" aria-hidden="true"></i>Pentecost</a>
-    <a class="selection btn btn-lg btn-danger mb-3 mx-4 mb-4 trinity text-white  shadow-sm" style="width: fit-content"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i><i class="fa fa-check d-none" aria-hidden="true"></i>Trinity</a>
+    <a class="selection btn btn-lg btn-danger mb-3 mx-4 mb-4 mp text-white shadow-sm" style="width: fit-content">
+      <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+      <i class="fa fa-check d-none" aria-hidden="true"></i>Misa Pacem</a>
+    <a class="selection btn btn-lg btn-danger mb-3 mx-4 mb-4 trinity text-white  shadow-sm active" style="width: fit-content">
+      <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+      <i class="fa fa-check d-none" aria-hidden="true"></i>Trinity</a>
+    <a class="selection btn btn-lg btn-danger mb-3 mx-4 mb-4 corpus-christi text-white  shadow-sm" style="width: fit-content">
+      <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+      <i class="fa fa-check d-none" aria-hidden="true"></i>Corpus Christi</a>
   </div>
 
   <div class="col">
@@ -86,72 +92,7 @@
   </div>
 
   <div class="col">
-    <div class="pentecost music mb-5" id="pentecost">
-      <div class="mb-4">
-        <h4 class="ml-4 ml-sm-2">
-          Come Holy Ghost
-        </h4>
-        <audio controls title="Come Holy Ghost" class="mb-2">
-          <source src="./audio/pentecost/come-holy-ghost.m4a" type="audio/mp4" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="mb-4">
-        <h4 class="ml-4 ml-sm-2">
-          Psalm 104: Lord, Send Out Your Spirit
-        </h4>
-        <audio controls title="Psalm 104: Lord, Send Out Your Spirit" class="mb-2">
-          <source src="./audio/pentecost/psalm-104-lord-send-out-your-spirit.m4a" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="mb-4">
-        <h4 class="ml-4 ml-sm-2">
-          Veni Sancte Spiritus (Chant)
-        </h4>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/NVj-C6VG90g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-      <div class="mb-4">
-        <h4 class="ml-4 ml-sm-2">
-         Gospel Acclamation 
-        </h4>
-        <audio controls title="Gospel Acclamation " class="mb-2">
-          <source src="./audio/pentecost/gospel-acc-pentecost.m4a" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="mb-4">
-        <h4 class="ml-4 ml-sm-2">
-          O Breathe on Me, O Breath of God
-        </h4>
-        <audio controls title="O Breathe on Me, O Breath of God" class="mb-2">
-          <source src="./audio/pentecost/o-breathe-on-me-o-breath-of-god.m4a" type="audio/mp4" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="mb-4">
-        <h4 class="ml-4 ml-sm-2">
-          Spirit Blowing through Creation
-        </h4>
-        <audio controls title="Spirit Blowing through Creation" class="mb-2">
-          <source src="./audio/pentecost/spirit-blowing-through-creation.m4a" type="audio/mp4" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-      <div class="mb-4">
-        <h4 class="ml-4 ml-sm-2">
-          O Spirit All-Embracing
-        </h4>
-        <audio controls title="O Spirit All-Embracing" class="mb-2">
-          <source src="./audio/pentecost/o-god-beyond-all-praising.m4a" type="audio/mp4" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </div>
-  </div>
-
-  <div class="col">
-    <div class="trinity music mb-5 d-none" id="trinity">
+    <div class="trinity music mb-5" id="trinity">
       <div class="mb-4">
         <h4 class="ml-4 ml-sm-2">
           O God, Almighty Father
@@ -205,6 +146,76 @@
         </h4>
         <audio controls title="Holy God, We Praise Thy Name" class="mb-2">
           <source src="./audio/trinity/holy-god-we-praise-thy-name.m4a" type="audio/mp4" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="corpus-christi music mb-5 d-none" id="corpus-christi">
+      <div class="mb-4">
+        <h4 class="ml-4 ml-sm-2">
+          Alleluia! Sing to Jesus!
+        </h4>
+        <audio controls title="Alleluia! Sing to Jesus!" class="mb-2">
+          <source src="./audio/corpus-christi/alleluia-sing-to-jesus.m4a" type="audio/mp4" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="mb-4">
+        <h4 class="ml-4 ml-sm-2">
+          Psalm 116: I Will Take the Cup of Salvation
+        </h4>
+        <audio controls title="Psalm 116: I Will Take the Cup of Salvation" class="mb-2">
+          <source src="./audio/corpus-christi/psalm-116-i-will-take-the-cup-of-salvation.m4a" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="mb-4">
+        <h4 class="ml-4 ml-sm-2">
+         Gospel Acclamation 
+        </h4>
+        <audio controls title="Gospel Acclamation " class="mb-2">
+          <source src="./audio/corpus-christi/gospel-acc-corpus-christi.m4a" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="mb-4">
+        <h4 class="ml-4 ml-sm-2">
+          How Beautiful
+        </h4>
+        <audio controls title="How Beautiful" class="mb-2">
+          <source src="./audio/corpus-christi/how-beautiful.m4a" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+
+      <div class="mb-4">
+        <h4 class="ml-4 ml-sm-2">
+          Ave Verum (Gregorian Chant)
+        </h4>
+        <audio controls title="Ave Verum (Gregorian Chant)" class="mb-2">
+          <source src="./audio/corpus-christi/ave-verum-chant.m4a" type="audio/mp4" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="mb-4">
+        <h4 class="ml-4 ml-sm-2">
+          Jesus, My Lord, My God, My All
+        </h4>
+        <audio controls title="Jesus, My Lord, My God, My All" class="mb-2">
+          <source src="./audio/corpus-christi/jesus-my-lord-my-god-my-all.m4a" type="audio/mp4" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="mb-4">
+        <h4 class="ml-4 ml-sm-2">
+          Praise to the Lord, the Almighty
+        </h4>
+        <audio controls title="Praise to the Lord, the Almighty" class="mb-2">
+          <source src="./audio/corpus-christi/praise-to-the-lord-the-almighty.m4a" type="audio/mp4" />
           Your browser does not support the audio element.
         </audio>
       </div>
