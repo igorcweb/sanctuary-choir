@@ -18,8 +18,8 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('otb11')) {
-    $("#otb11").removeClass("d-none");
+  if ($(this).hasClass('otb13')) {
+    $("#otb13").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
   }
