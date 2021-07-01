@@ -26,6 +26,9 @@ $('.selection').on('click', function () {
   else if ($(this).hasClass('otb14')) {
     $("#otb14").removeClass("d-none");
   }
+  else if ($(this).hasClass('otb16')) {
+    $("#otb16").removeClass("d-none");
+  }
 })
 
 $(document).on('mouseover', '.selection', function () {
