@@ -12,6 +12,10 @@ function activate() {
 activate();
 
 $('.selection').on('click', function () {
+  $('audio').each(function () {
+    $(this)[0].pause()
+    $(this)[0].currentTime = 0;
+  })
   $("a").removeClass("active");
   $(this).addClass("active");
   $('.selection').find('.fa-hand-pointer-o').removeClass('d-none')
@@ -38,6 +42,17 @@ $(document).on('mouseover', '.selection', function () {
 $(document).on('mouseout', '.selection', function () {
   $(this).find('.fa-hand-pointer-o').removeClass('hover');
 })
+
+
+$("audio").on("play", function () {
+  $("audio").not(this).each(function (index, audio) {
+    audio.pause()
+    audio.currentTime = 0
+  });
+});
+
+
+
 
 
 
