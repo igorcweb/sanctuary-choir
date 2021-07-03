@@ -12,10 +12,7 @@ function activate() {
 activate();
 
 $('.selection').on('click', function () {
-  $('audio').each(function () {
-    $(this)[0].pause()
-    $(this)[0].currentTime = 0;
-  })
+
   $("a").removeClass("active");
   $(this).addClass("active");
   $('.selection').find('.fa-hand-pointer-o').removeClass('d-none')
@@ -33,6 +30,10 @@ $('.selection').on('click', function () {
   else if ($(this).hasClass('otb16')) {
     $("#otb16").removeClass("d-none");
   }
+  $('audio').each(function () {
+    $(this)[0].pause()
+    $(this)[0].currentTime = 0;
+  })
 })
 
 $(document).on('mouseover', '.selection', function () {
