@@ -12,7 +12,6 @@ function activate() {
 activate();
 
 $('.selection').on('click', function () {
-
   $("a").removeClass("active");
   $(this).addClass("active");
   $('.selection').find('.fa-hand-pointer-o').removeClass('d-none')
