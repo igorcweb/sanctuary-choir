@@ -25,6 +25,9 @@ $('.selection').on('click', function () {
   } else if ($(this).hasClass('otb18')) {
     $("#otb18").removeClass("d-none");
   }
+  else if ($(this).hasClass('assumption')) {
+    $("#assumption").removeClass("d-none");
+  }
   $('audio').each(function () {
     $(this)[0].pause()
     $(this)[0].currentTime = 0;
