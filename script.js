@@ -18,12 +18,12 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('otb19')) {
-    $("#otb19").removeClass("d-none");
+  if ($(this).hasClass('otb21')) {
+    $("#otb21").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('otb18')) {
-    $("#otb18").removeClass("d-none");
+  } else if ($(this).hasClass('otb22')) {
+    $("#otb22").removeClass("d-none");
   }
   else if ($(this).hasClass('assumption')) {
     $("#assumption").removeClass("d-none");
