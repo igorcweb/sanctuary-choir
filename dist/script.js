@@ -1,5 +1,3 @@
-
-
 function activate() {
   $.each($('.selection'), function (i, selection) {
     if ($(selection).hasClass('active')) {
@@ -22,9 +20,8 @@ $('.selection').on('click', function () {
     $("#otb25").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  }
-  else if ($(this).hasClass('otb24')) {
-    $("#otb24").removeClass("d-none");
+  } else if ($(this).hasClass('otb26')) {
+    $("#otb26").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
