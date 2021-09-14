@@ -38,12 +38,7 @@ $(document).on('mouseout', '.selection', function () {
 })
 
 
-$("audio").on("play", function () {
-  $("audio").not(this).each(function (index, audio) {
-    audio.pause()
-    audio.currentTime = 0
-  });
-});
+
 
 const mpDiv = $('.mp.music');
 
@@ -135,7 +130,7 @@ function populateTracks(track, div) {
       <h4 class="ms-4 ms-sm-2">
         ${track.title}
       </h4>
-      <audio controls title="${track.title}" class="mb-2">
+      <audio controls title="${track.title}" class="audio-control mb-2">
         <source src="${track.file}" type="audio/mp4" />
         Your browser does not support the audio element.
       </audio>
@@ -147,6 +142,13 @@ function populateTracks(track, div) {
 populateTracks(mp, mpDiv);
 populateTracks(otb25, otb25Div);
 populateTracks(otb26, otb26Div);
+
+$('.audio-control').on("play", function () {
+  $(".audio-control").not(this).each(function (index, audio) {
+    audio.pause()
+    audio.currentTime = 0
+  });
+});
 
 
 
