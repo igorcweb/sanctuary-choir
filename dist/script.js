@@ -16,8 +16,8 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('otb25')) {
-    $("#otb25").removeClass("d-none");
+  if ($(this).hasClass('otb27')) {
+    $("#otb27").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
   } else if ($(this).hasClass('otb26')) {
@@ -65,32 +65,32 @@ const mp = [
   },
 ]
 
-const otb25Div = $('.otb25.music');
-const otb25 = [
+const otb27Div = $('.otb27.music');
+const otb27 = [
   {
-    title: 'Christ, Be Our Light!',
-    file: './audio/otb-25/christ-be-our-light.m4a'
+    title: 'All Creatures of Our God and King',
+    file: './audio/otb-27/all-creatures-of-our-god-and-king.m4a'
   },
   {
-    title: 'Psalm 54: The Lord Upholds My Life',
-    file: './audio/otb-25/psalm-54-the-lord-upholds-my-life.m4a'
+    title: 'Psalm 128: May the Lord Bless Us',
+    file: './audio/otb-27/psalm-128-may-the-lord-bless-us.m4a'
   },
   {
     title: 'Gospel Acclamation',
-    file: './audio/otb-25/gospel-acc-otb25.m4a'
+    file: './audio/otb-27/gospel-acc-otb27.m4a'
   },
   {
-    title: 'Be Not Afraid',
-    file: './audio/otb-25/be-not-afraid.m4a'
+    title: 'God is Love',
+    file: './audio/otb-27/god-is-love.m4a'
   },
 
   {
-    title: 'Make of Our Hands a Throne',
-    file: './audio/otb-25/make-of-our-hands-a-throne.m4a'
+    title: 'Bread of Life',
+    file: './audio/otb-27/bread-of-life.m4a'
   },
   {
-    title: 'We Are Called',
-    file: './audio/otb-25/we-are-called.m4a'
+    title: 'Love Divine, All Loves Excelling',
+    file: './audio/otb-27/love-divine-all-loves-excelling.m4a'
   },
 ]
 
@@ -140,7 +140,7 @@ function populateTracks(track, div) {
 }
 
 populateTracks(mp, mpDiv);
-populateTracks(otb25, otb25Div);
+populateTracks(otb27, otb27Div);
 populateTracks(otb26, otb26Div);
 
 $('.audio-control').on("play", function () {
