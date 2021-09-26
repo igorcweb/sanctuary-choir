@@ -20,8 +20,8 @@ $('.selection').on('click', function () {
     $("#otb27").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('otb26')) {
-    $("#otb26").removeClass("d-none");
+  } else if ($(this).hasClass('otb28')) {
+    $("#otb28").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -94,32 +94,61 @@ const otb27 = [
   },
 ]
 
-const otb26Div = $('.otb26.music');
-const otb26 = [
+// const otb26Div = $('.otb26.music');
+// const otb26 = [
+//   {
+//     title: 'As a Fire Is Meant for Burning',
+//     file: './audio/otb-26/as-a-fire-is-mean-for-burning.m4a'
+//   },
+//   {
+//     title: 'Psalm 19: The Precepts of the Lord',
+//     file: './audio/otb-26/psalm-19-the-precepts-of-the-lord.m4a'
+//   },
+//   {
+//     title: 'Gospel Acclamation',
+//     file: './audio/otb-26/gospel-acc-otb26.m4a'
+//   },
+//   {
+//     title: 'Set Your Heart on the Higher Gifts',
+//     file: './audio/otb-26/set-your-heart-on-the-higher-gifts.m4a'
+//   },
+
+//   {
+//     title: 'One Communion of Love',
+//     file: './audio/otb-26/one-communion-of-love.m4a'
+//   },
+//   {
+//     title: 'Go Make of All Disciples',
+//     file: './audio/otb-26/go-make-of-all-disciples.m4a'
+//   },
+// ]
+
+const otb28Div = $('.otb28.music');
+const otb28 = [
   {
-    title: 'As a Fire Is Meant for Burning',
-    file: './audio/otb-26/as-a-fire-is-mean-for-burning.m4a'
+    title: 'O God, Our Help in Ages Past',
+    file: './audio/otb-28/o-god-our-help-in-ages-past.m4a'
   },
   {
-    title: 'Psalm 19: The Precepts of the Lord',
-    file: './audio/otb-26/psalm-19-the-precepts-of-the-lord.m4a'
+    title: 'Psalm 90: Fill Us with Your Love',
+    file: './audio/otb-28/psalm-90-fill-us-with-your-love.m4a'
   },
   {
     title: 'Gospel Acclamation',
-    file: './audio/otb-26/gospel-acc-otb26.m4a'
+    file: './audio/otb-28/gospel-acc-otb28.m4a'
   },
   {
-    title: 'Set Your Heart on the Higher Gifts',
-    file: './audio/otb-26/set-your-heart-on-the-higher-gifts.m4a'
+    title: 'Eye Has Not Seen',
+    file: './audio/otb-28/eye-has-not-seen.m4a'
   },
 
   {
-    title: 'One Communion of Love',
-    file: './audio/otb-26/one-communion-of-love.m4a'
+    title: 'We Remember',
+    file: './audio/otb-28/we-remember.m4a'
   },
   {
-    title: 'Go Make of All Disciples',
-    file: './audio/otb-26/go-make-of-all-disciples.m4a'
+    title: 'Holy God, We Praise Thy Name',
+    file: './audio/otb-28/holy-god-we-praise-thy-name.m4a'
   },
 ]
 
@@ -141,7 +170,7 @@ function populateTracks(track, div) {
 
 populateTracks(mp, mpDiv);
 populateTracks(otb27, otb27Div);
-populateTracks(otb26, otb26Div);
+populateTracks(otb28, otb28Div);
 
 $('.audio-control').on("play", function () {
   $(".audio-control").not(this).each(function (index, audio) {
