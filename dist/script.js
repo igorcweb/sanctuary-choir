@@ -20,8 +20,8 @@ $('.selection').on('click', function () {
     $("#otb29").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('otb28')) {
-    $("#otb28").removeClass("d-none");
+  } else if ($(this).hasClass('otb30')) {
+    $("#otb30").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -85,26 +85,26 @@ const otb29 = [
   },
 ]
 
-const otb28Div = $('.otb28.music');
-const otb28 = [
+const otb30Div = $('.otb30.music');
+const otb30 = [
   {
-    title: 'O God, Our Help in Ages Past'
+    title: 'God Is Here! As We His People'
   },
   {
-    title: 'Psalm 90: Fill Us with Your Love'
+    title: 'Psalm 126: The Lord Has Done Great Things for Us'
   },
   {
     title: 'Gospel Acclamation'
   },
   {
-    title: 'Eye Has Not Seen'
+    title: 'Open My Eyes'
   },
 
   {
-    title: 'We Remember'
+    title: 'At the Table of Jesus'
   },
   {
-    title: 'Holy God, We Praise Thy Name'
+    title: 'Glory and Praise to Our God'
   },
 ]
 
@@ -137,7 +137,7 @@ function populateTracks(track, div, folder) {
 
 populateTracks(mp, mpDiv, 'missa-pacem');
 populateTracks(otb29, otb29Div, 'otb-29');
-populateTracks(otb28, otb28Div, 'otb-28');
+populateTracks(otb30, otb30Div, 'otb-30');
 
 $('.audio-control').on("play", function () {
   $(".audio-control").not(this).each(function (index, audio) {
