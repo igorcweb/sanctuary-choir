@@ -16,8 +16,8 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('otb29')) {
-    $("#otb29").removeClass("d-none");
+  if ($(this).hasClass('otb31')) {
+    $("#otb31").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
   } else if ($(this).hasClass('otb30')) {
@@ -108,6 +108,29 @@ const otb30 = [
   },
 ]
 
+const otb31Div = $('.otb31.music');
+const otb31 = [
+  {
+    title: 'Love Divine, All Loves Excelling'
+  },
+  {
+    title: 'Psalm 18: I Love you, Lord, My Strength'
+  },
+  {
+    title: 'Gospel Acclamation'
+  },
+  {
+    title: 'Here I Am, Lord'
+  },
+
+  {
+    title: 'Taste and See'
+  },
+  {
+    title: 'O God Beyond All Praising'
+  },
+]
+
 function populateTracks(track, div, folder) {
   $.each(track, (i, track) => {
     let fileName = track.title
@@ -119,6 +142,9 @@ function populateTracks(track, div, folder) {
       .toLowerCase();
     if (track.title === 'Gospel Acclamation') {
       fileName = `gospel-acc-${folder}`
+    }
+    if (track.title === 'Here I Am, Lord') {
+      fileName = `here-i-am-lord-ward`
     }
     const file = `./audio/${folder}/${fileName}.m4a`;
     $(div).append(`
@@ -136,8 +162,8 @@ function populateTracks(track, div, folder) {
 }
 
 populateTracks(mp, mpDiv, 'missa-pacem');
-populateTracks(otb29, otb29Div, 'otb-29');
 populateTracks(otb30, otb30Div, 'otb-30');
+populateTracks(otb31, otb31Div, 'otb-31');
 
 $('.audio-control').on("play", function () {
   $(".audio-control").not(this).each(function (index, audio) {
