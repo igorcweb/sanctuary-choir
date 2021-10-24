@@ -20,8 +20,8 @@ $('.selection').on('click', function () {
     $("#otb31").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('otb30')) {
-    $("#otb30").removeClass("d-none");
+  } else if ($(this).hasClass('allSaints')) {
+    $("#allSaints").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -57,56 +57,35 @@ const mp = [
   },
 ]
 
-const otb29Div = $('.otb29.music');
-const otb29 = [
+const allSaintsDiv = $('.allSaints.music');
+const allSaints = [
   {
-    title: 'There’s a Wideness in God’s Mercy'
+    title: 'For All the Saints'
 
   },
   {
-    title: 'Psalm 33: Lord, Let Your Mercy Be on Us'
+    title: 'Psalm 24: Lord, This Is the People'
 
   },
   {
     title: 'Gospel Acclamation'
   },
   {
-    title: 'Unless a Grain of Wheat'
+    title: 'O Sacrament Most Holy'
 
   },
 
   {
-    title: 'You Satisfy a Hungry Heart'
+    title: 'Only in God'
 
   },
   {
-    title: 'Go Make of All Disciples'
+    title: 'Ye Watchers and Ye Holy Ones'
 
   },
 ]
 
-const otb30Div = $('.otb30.music');
-const otb30 = [
-  {
-    title: 'God Is Here! As We His People'
-  },
-  {
-    title: 'Psalm 126: The Lord Has Done Great Things for Us'
-  },
-  {
-    title: 'Gospel Acclamation'
-  },
-  {
-    title: 'Open My Eyes'
-  },
 
-  {
-    title: 'At the Table of Jesus'
-  },
-  {
-    title: 'Glory and Praise to Our God'
-  },
-]
 
 const otb31Div = $('.otb31.music');
 const otb31 = [
@@ -162,8 +141,8 @@ function populateTracks(track, div, folder) {
 }
 
 populateTracks(mp, mpDiv, 'missa-pacem');
-populateTracks(otb30, otb30Div, 'otb-30');
 populateTracks(otb31, otb31Div, 'otb-31');
+populateTracks(allSaints, allSaintsDiv, 'allSaints');
 
 $('.audio-control').on("play", function () {
   $(".audio-control").not(this).each(function (index, audio) {
