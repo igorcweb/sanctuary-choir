@@ -16,8 +16,8 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('otb31')) {
-    $("#otb31").removeClass("d-none");
+  if ($(this).hasClass('otb33')) {
+    $("#otb33").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
   } else if ($(this).hasClass('allSaints')) {
@@ -89,27 +89,30 @@ const allSaints = [
 
 
 
-const otb31Div = $('.otb31.music');
-const otb31 = [
+const otb33Div = $('.otb33.music');
+const otb33 = [
   {
-    title: 'Love Divine, All Loves Excelling'
+    title: 'All Creatures of Our God and King	'
+
   },
   {
-    title: 'Psalm 18: I Love you, Lord, My Strength'
+    title: 'Psalm 16: You Are My Inheritance'
+
   },
   {
     title: 'Gospel Acclamation'
   },
   {
-    title: 'Here I Am, Lord'
+    title: 'Only This I Want'
   },
 
   {
-    title: 'Taste and See'
+    title: 'Blessed Assurance'
   },
   {
-    title: 'O God Beyond All Praising'
-  },
+    title: 'Holy God We Praise Thy Name'
+
+  }
 ]
 
 const otb32Div = $('.otb32.music');
@@ -166,7 +169,7 @@ function populateTracks(track, div, folder) {
 }
 
 populateTracks(mp, mpDiv, 'missa-pacem');
-populateTracks(otb31, otb31Div, 'otb-31');
+populateTracks(otb33, otb33Div, 'otb-33');
 populateTracks(allSaints, allSaintsDiv, 'allSaints');
 populateTracks(otb32, otb32Div, 'otb-32');
 
