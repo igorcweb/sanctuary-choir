@@ -22,6 +22,8 @@ $('.selection').on('click', function () {
     $("#mp").removeClass("d-none");
   } else if ($(this).hasClass('ctk')) {
     $("#ctk").removeClass("d-none");
+  } else if ($(this).hasClass('otb32')) {
+    $("#otb32").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
