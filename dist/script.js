@@ -57,6 +57,29 @@ const mp = [
   },
 ]
 
+const otb32Div = $('.otb32.music');
+const otb32 = [
+  {
+    title: 'Christ Be Our Light'
+  },
+  {
+    title: 'Psalm 146: Praise the Lord, My Soul'
+  },
+  {
+    title: 'Gospel Acclamation'
+  },
+  {
+    title: 'What You Have Done for Me'
+  },
+
+  {
+    title: 'These Alone Are Enough'
+  },
+  {
+    title: 'Go Make of All Disciples'
+  },
+]
+
 const ctkDiv = $('.ctk.music');
 const ctk = [
   {
@@ -145,6 +168,7 @@ function populateTracks(track, div, folder) {
 
 populateTracks(mp, mpDiv, 'missa-pacem');
 populateTracks(otb33, otb33Div, 'otb-33');
+populateTracks(otb32, otb32Div, 'otb-32');
 populateTracks(ctk, ctkDiv, 'ctk');
 
 $('.audio-control').on("play", function () {
