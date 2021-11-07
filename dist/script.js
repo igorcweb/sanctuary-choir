@@ -20,10 +20,8 @@ $('.selection').on('click', function () {
     $("#otb33").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('allSaints')) {
-    $("#allSaints").removeClass("d-none");
-  } else if ($(this).hasClass('otb32')) {
-    $("#otb32").removeClass("d-none");
+  } else if ($(this).hasClass('ctk')) {
+    $("#ctk").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -59,30 +57,30 @@ const mp = [
   },
 ]
 
-const allSaintsDiv = $('.allSaints.music');
-const allSaints = [
+const ctkDiv = $('.ctk.music');
+const ctk = [
   {
-    title: 'For All the Saints'
+    title: 'To Jesus Christ, Our Sovereign King'
 
   },
   {
-    title: 'Psalm 24: Lord, This Is the People'
+    title: 'Psalm 93: The Lord Is King'
 
   },
   {
     title: 'Gospel Acclamation'
   },
   {
+    title: 'Behold the Lamb'
+
+  },
+
+  {
     title: 'O Sacrament Most Holy'
 
   },
-
   {
-    title: 'Only in God'
-
-  },
-  {
-    title: 'Ye Watchers and Ye Holy Ones'
+    title: 'Rejoice, the Lord Is King!'
 
   },
 ]
@@ -113,29 +111,6 @@ const otb33 = [
     title: 'Holy God We Praise Thy Name'
 
   }
-]
-
-const otb32Div = $('.otb32.music');
-const otb32 = [
-  {
-    title: 'Christ Be Our Light'
-  },
-  {
-    title: 'Psalm 146: Praise the Lord, My Soul'
-  },
-  {
-    title: 'Gospel Acclamation'
-  },
-  {
-    title: 'What You Have Done for Me'
-  },
-
-  {
-    title: 'These Alone Are Enough'
-  },
-  {
-    title: 'Go Make of All Disciples'
-  },
 ]
 
 function populateTracks(track, div, folder) {
@@ -170,8 +145,7 @@ function populateTracks(track, div, folder) {
 
 populateTracks(mp, mpDiv, 'missa-pacem');
 populateTracks(otb33, otb33Div, 'otb-33');
-populateTracks(allSaints, allSaintsDiv, 'allSaints');
-populateTracks(otb32, otb32Div, 'otb-32');
+populateTracks(ctk, ctkDiv, 'ctk');
 
 $('.audio-control').on("play", function () {
   $(".audio-control").not(this).each(function (index, audio) {
