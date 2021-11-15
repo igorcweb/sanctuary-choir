@@ -8,6 +8,18 @@ body {
   /* background-color: #9370db; */
 }
 
+.bg-advent {
+  background-color: rgb(3,11,82);
+}
+
+.text-advent {
+  color: #FEFFEA
+}
+
+.btn-advent {
+  background-color: #FEFFEA;
+}
+
 audio,
 iframe {
   max-width: 92%;
