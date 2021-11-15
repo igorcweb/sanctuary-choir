@@ -16,8 +16,8 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('otb33')) {
-    $("#otb33").removeClass("d-none");
+  if ($(this).hasClass('a1c')) {
+    $("#a1c").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
   } else if ($(this).hasClass('ctk')) {
@@ -87,28 +87,28 @@ const ctk = [
 
 
 
-const otb33Div = $('.otb33.music');
-const otb33 = [
+const a1cDiv = $('.a1c.music');
+const a1c = [
   {
-    title: 'All Creatures of Our God and King	'
+    title: 'Advent Gathering Antiphon'
 
   },
   {
-    title: 'Psalm 16: You Are My Inheritance'
+    title: 'Psalm 25: To You, O Lord'
 
   },
   {
     title: 'Gospel Acclamation'
   },
   {
-    title: 'Only This I Want'
+    title: 'Be Still and Know that I Am God'
   },
 
   {
-    title: 'Blessed Assurance'
+    title: 'Bread of LIfe'
   },
   {
-    title: 'Holy God We Praise Thy Name'
+    title: 'The King Shall Come when Morning Dawns'
 
   }
 ]
@@ -144,7 +144,7 @@ function populateTracks(track, div, folder) {
 }
 
 populateTracks(mp, mpDiv, 'missa-pacem');
-populateTracks(otb33, otb33Div, 'otb-33');
+populateTracks(a1c, a1cDiv, 'a1c');
 populateTracks(ctk, ctkDiv, 'ctk');
 
 $('.audio-control').on("play", function () {
