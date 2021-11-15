@@ -101,11 +101,10 @@ const a1c = [
     title: 'Gospel Acclamation'
   },
   {
-    title: 'Be Still and Know that I Am God'
-  },
-
-  {
     title: 'Bread of LIfe'
+  },
+  {
+    title: 'Be Still and Know that I Am God'
   },
   {
     title: 'The King Shall Come when Morning Dawns'
