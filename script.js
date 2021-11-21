@@ -22,6 +22,8 @@ $('.selection').on('click', function () {
     $("#mp").removeClass("d-none");
   } else if ($(this).hasClass('ctk')) {
     $("#ctk").removeClass("d-none");
+  } else if ($(this).hasClass('a2c')) {
+    $("#a2c").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -112,6 +114,31 @@ const a1c = [
   }
 ]
 
+const a2cDiv = $('.a2c.music');
+const a2c = [
+  {
+    title: 'Advent Gathering Antiphon'
+
+  },
+  {
+    title: 'Psalm 126: The Lord Has Done Great Things for Us'
+
+  },
+  {
+    title: 'Gospel Acclamation'
+  },
+  {
+    title: 'Like a Shepherd'
+  },
+  {
+    title: 'Creator of the Stars of Night'
+  },
+  {
+    title: 'A Voice Cries Out'
+
+  }
+]
+
 function populateTracks(track, div, folder) {
   $.each(track, (i, track) => {
     let fileName = track.title
@@ -144,6 +171,7 @@ function populateTracks(track, div, folder) {
 
 populateTracks(mp, mpDiv, 'missa-pacem');
 populateTracks(a1c, a1cDiv, 'a1c');
+populateTracks(a2c, a2cDiv, 'a2c');
 populateTracks(ctk, ctkDiv, 'ctk');
 
 $('.audio-control').on("play", function () {
