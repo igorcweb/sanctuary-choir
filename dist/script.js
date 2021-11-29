@@ -91,7 +91,7 @@ const ic = [
 const a3cDiv = $('.a3c.music');
 const a3c = [
   {
-    title: 'On Jordan’s Bank'
+    title: 'Advent Gathering Antiphon'
   },
   {
     title: 'Isaiah 12: Cry Out with Joy and Gladness'
