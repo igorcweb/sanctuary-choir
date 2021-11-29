@@ -16,12 +16,12 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('a1c')) {
-    $("#a1c").removeClass("d-none");
+  if ($(this).hasClass('a3c')) {
+    $("#a3c").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('ctk')) {
-    $("#ctk").removeClass("d-none");
+  } else if ($(this).hasClass('ic')) {
+    $("#ic").removeClass("d-none");
   } else if ($(this).hasClass('a2c')) {
     $("#a2c").removeClass("d-none");
   }
@@ -59,57 +59,54 @@ const mp = [
   },
 ]
 
-const ctkDiv = $('.ctk.music');
-const ctk = [
+const icDiv = $('.ic.music');
+const ic = [
   {
-    title: 'To Jesus Christ, Our Sovereign King'
+    title: 'Immaculate Mary'
 
   },
   {
-    title: 'Psalm 93: The Lord Is King'
+    title: 'Psalm 98: Sing to the Lord a New Song'
+  },
+  // {
+  //   title: 'Gospel Acclamation'
+  // },
+  {
+    title: 'Dwelling Place'
+
+  },
+
+  {
+    title: 'Ave Maria (Chant)'
 
   },
   {
-    title: 'Gospel Acclamation'
-  },
-  {
-    title: 'Behold the Lamb'
-
-  },
-
-  {
-    title: 'O Sacrament Most Holy'
-
-  },
-  {
-    title: 'Rejoice, the Lord Is King!'
+    title: 'Sing of Mary, Pure and Lowly'
 
   },
 ]
 
 
 
-const a1cDiv = $('.a1c.music');
-const a1c = [
+const a3cDiv = $('.a3c.music');
+const a3c = [
   {
-    title: 'Advent Gathering Antiphon'
-
+    title: 'On Jordan’s Bank'
   },
   {
-    title: 'Psalm 25: To You, O Lord'
-
+    title: 'Isaiah 12: Cry Out with Joy and Gladness'
   },
   {
     title: 'Gospel Acclamation'
   },
   {
-    title: 'Bread of LIfe'
+    title: 'O Come, O Come Emmanuel'
   },
   {
-    title: 'Be Still and Know that I Am God'
+    title: 'Comfort, My People'
   },
   {
-    title: 'The King Shall Come when Morning Dawns'
+    title: 'Come, O Long Expected Jesus'
 
   }
 ]
@@ -147,6 +144,8 @@ function populateTracks(track, div, folder) {
       .replaceAll('!', '')
       .replaceAll("’", '')
       .replaceAll(' ', '-')
+      .replaceAll('(', '')
+      .replaceAll(')', '')
       .toLowerCase();
     if (track.title === 'Gospel Acclamation') {
       fileName = `gospel-acc-${folder}`
@@ -170,9 +169,9 @@ function populateTracks(track, div, folder) {
 }
 
 populateTracks(mp, mpDiv, 'missa-pacem');
-populateTracks(a1c, a1cDiv, 'a1c');
+populateTracks(a3c, a3cDiv, 'a3c');
 populateTracks(a2c, a2cDiv, 'a2c');
-populateTracks(ctk, ctkDiv, 'ctk');
+populateTracks(ic, icDiv, 'ic');
 
 $('.audio-control').on("play", function () {
   $(".audio-control").not(this).each(function (index, audio) {
