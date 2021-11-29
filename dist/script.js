@@ -24,6 +24,8 @@ $('.selection').on('click', function () {
     $("#ic").removeClass("d-none");
   } else if ($(this).hasClass('a2c')) {
     $("#a2c").removeClass("d-none");
+  } else if ($(this).hasClass('a4c')) {
+    $("#a4c").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -111,6 +113,29 @@ const a3c = [
   }
 ]
 
+const a4cDiv = $('.a4c.music');
+const a4c = [
+  {
+    title: 'Advent Gathering Antiphon'
+  },
+  {
+    title: 'Psalm 80: Lord, Make Us Turn to You'
+  },
+  {
+    title: 'Gospel Acclamation'
+  },
+  {
+    title: 'Emmanuel'
+  },
+  {
+    title: 'Hail Mary: Gentle Woman'
+  },
+  {
+    title: 'O Come, Divine Messiah!'
+
+  }
+]
+
 const a2cDiv = $('.a2c.music');
 const a2c = [
   {
@@ -170,6 +195,7 @@ function populateTracks(track, div, folder) {
 
 populateTracks(mp, mpDiv, 'missa-pacem');
 populateTracks(a3c, a3cDiv, 'a3c');
+populateTracks(a4c, a4cDiv, 'a4c');
 populateTracks(a2c, a2cDiv, 'a2c');
 populateTracks(ic, icDiv, 'ic');
 
