@@ -20,12 +20,14 @@ $('.selection').on('click', function () {
     $("#a3c").removeClass("d-none");
   } else if ($(this).hasClass('mp')) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('ic')) {
-    $("#ic").removeClass("d-none");
-  } else if ($(this).hasClass('a2c')) {
-    $("#a2c").removeClass("d-none");
+  } else if ($(this).hasClass('mm')) {
+    $("#mm").removeClass("d-none");
+  } else if ($(this).hasClass('ce')) {
+    $("#ce").removeClass("d-none");
   } else if ($(this).hasClass('a4c')) {
     $("#a4c").removeClass("d-none");
+  } else if ($(this).hasClass('cd')) {
+    $("#cd").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -61,57 +63,33 @@ const mp = [
   },
 ]
 
-const icDiv = $('.ic.music');
-const ic = [
+const ceDiv = $('.ce.music');
+const ce = [
   {
-    title: 'Immaculate Mary'
-
-  },
-  {
-    title: 'Psalm 98: Sing to the Lord a New Song'
-  },
-  // {
-  //   title: 'Gospel Acclamation'
-  // },
-  {
-    title: 'Dwelling Place'
-
-  },
-
-  {
-    title: 'Ave Maria (Chant)'
-
-  },
-  {
-    title: 'Sing of Mary, Pure and Lowly'
-
-  },
-]
-
-
-
-const a3cDiv = $('.a3c.music');
-const a3c = [
-  {
-    title: 'Advent Gathering Antiphon'
-  },
-  {
-    title: 'Isaiah 12: Cry Out with Joy and Gladness'
+    title: 'Psalm 89: Forever I Will Sing'
   },
   {
     title: 'Gospel Acclamation'
   },
-  {
-    title: 'O Come, O Come Emmanuel'
-  },
-  {
-    title: 'Comfort, My People'
-  },
-  {
-    title: 'Come, O Long Expected Jesus'
 
-  }
 ]
+
+const mmDiv = $('.mm.music');
+const mm = [
+  {
+    title: 'Psalm 96: Today Is Born Our Savior'
+  },
+
+]
+
+const cdDiv = $('.cd.music');
+const cd = [
+  {
+    title: 'Psalm 98: All the Ends of the Earth'
+  },
+]
+
+
 
 const a4cDiv = $('.a4c.music');
 const a4c = [
@@ -136,30 +114,6 @@ const a4c = [
   }
 ]
 
-const a2cDiv = $('.a2c.music');
-const a2c = [
-  {
-    title: 'Advent Gathering Antiphon'
-
-  },
-  {
-    title: 'Psalm 126: The Lord Has Done Great Things for Us'
-
-  },
-  {
-    title: 'Gospel Acclamation'
-  },
-  {
-    title: 'Like a Shepherd'
-  },
-  {
-    title: 'Creator of the Stars of Night'
-  },
-  {
-    title: 'A Voice Cries Out'
-
-  }
-]
 
 function populateTracks(track, div, folder) {
   $.each(track, (i, track) => {
@@ -194,10 +148,11 @@ function populateTracks(track, div, folder) {
 }
 
 populateTracks(mp, mpDiv, 'missa-pacem');
-populateTracks(a3c, a3cDiv, 'a3c');
 populateTracks(a4c, a4cDiv, 'a4c');
-populateTracks(a2c, a2cDiv, 'a2c');
-populateTracks(ic, icDiv, 'ic');
+populateTracks(ce, ceDiv, 'christmas-eve');
+populateTracks(mm, mmDiv, 'midnight');
+populateTracks(cd, cdDiv, 'christmas-day');
+
 
 $('.audio-control').on("play", function () {
   $(".audio-control").not(this).each(function (index, audio) {
