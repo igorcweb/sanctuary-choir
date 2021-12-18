@@ -28,6 +28,8 @@ $('.selection').on('click', function () {
     $("#a4c").removeClass("d-none");
   } else if ($(this).hasClass('cd')) {
     $("#cd").removeClass("d-none");
+  } else if ($(this).hasClass('hf')) {
+    $("#hf").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -71,7 +73,16 @@ const ce = [
   {
     title: 'Gospel Acclamation'
   },
+]
 
+const hfDiv = $('.hf.music');
+const hf = [
+  {
+    title: 'Psalm 128: Blest Are Those Who Love You'
+  },
+  {
+    title: 'Gospel Acclamation'
+  },
 ]
 
 const mmDiv = $('.mm.music');
@@ -152,6 +163,7 @@ populateTracks(a4c, a4cDiv, 'a4c');
 populateTracks(ce, ceDiv, 'christmas-eve');
 populateTracks(mm, mmDiv, 'midnight');
 populateTracks(cd, cdDiv, 'christmas-day');
+populateTracks(hf, hfDiv, 'holy-family');
 
 
 $('.audio-control').on("play", function () {
