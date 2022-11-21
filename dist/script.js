@@ -16,20 +16,10 @@ $('.selection').on('click', function () {
   $('.selection').find('.fa-check').addClass('d-none')
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('a3c')) {
-    $("#a3c").removeClass("d-none");
-  } else if ($(this).hasClass('mp')) {
-    $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass('mm')) {
-    $("#mm").removeClass("d-none");
-  } else if ($(this).hasClass('ce')) {
-    $("#ce").removeClass("d-none");
-  } else if ($(this).hasClass('a4c')) {
-    $("#a4c").removeClass("d-none");
-  } else if ($(this).hasClass('cd')) {
-    $("#cd").removeClass("d-none");
-  } else if ($(this).hasClass('hf')) {
-    $("#hf").removeClass("d-none");
+  if ($(this).hasClass('ml')) {
+    $("#ml").removeClass("d-none");
+  } else if ($(this).hasClass('aa1')) {
+    $("#aa1").removeClass("d-none");
   }
   $('audio').each(function () {
     $(this)[0].pause()
@@ -45,82 +35,62 @@ $(document).on('mouseout', '.selection', function () {
   $(this).find('.fa-hand-pointer-o').removeClass('hover');
 })
 
-const mpDiv = $('.mp.music');
+// const mpDiv = $('.mp.music');
 
-const mp = [
+// const mp = [
+//   {
+//     title: 'Penitential Act'
+//   },
+//   {
+//     title: 'Gloria'
+//   },
+//   {
+//     title: 'Holy'
+//   },
+//   {
+//     title: 'When We Eat This Bread'
+//   },
+//   {
+//     title: 'Lamb of God'
+//   },
+// ]
+
+const mlDiv = $('.ml.music');
+const ml = [
   {
-    title: 'Penitential Act'
+    title: 'Kyrie',
   },
   {
-    title: 'Gloria'
+    title: 'Holy',
   },
   {
-    title: 'Holy'
+    title: 'Save Us Savior',
   },
   {
-    title: 'When We Eat This Bread'
-  },
-  {
-    title: 'Lamb of God'
+    title: 'Lamb of God',
   },
 ]
 
-const ceDiv = $('.ce.music');
-const ce = [
+const aa1Div = $('.aa1.music');
+const aa1 = [
   {
-    title: 'Psalm 89: Forever I Will Sing'
+    title: 'The King Shall Come When Morning Dawns'
   },
   {
-    title: 'Gospel Acclamation'
-  },
-]
-
-const hfDiv = $('.hf.music');
-const hf = [
-  {
-    title: 'Psalm 128: Blest Are Those Who Love You'
-  },
-  {
-    title: 'Gospel Acclamation'
-  },
-]
-
-const mmDiv = $('.mm.music');
-const mm = [
-  {
-    title: 'Psalm 96: Today Is Born Our Savior'
-  },
-
-]
-
-const cdDiv = $('.cd.music');
-const cd = [
-  {
-    title: 'Psalm 98: All the Ends of the Earth'
-  },
-]
-
-
-
-const a4cDiv = $('.a4c.music');
-const a4c = [
-  {
-    title: 'Advent Gathering Antiphon'
-  },
-  {
-    title: 'Psalm 80: Lord, Make Us Turn to You'
+    title: 'Psalm 122: Let Us Go Rejoicing'
   },
   {
     title: 'Gospel Acclamation'
   },
   {
-    title: 'Emmanuel'
+    title: 'Bread of Life'
   },
   {
-    title: 'Hail Mary: Gentle Woman'
+    title: 'Creator of the Stars of Night'
   },
+
   {
-    title: 'O Come, Divine Messiah!'
+    title: 'Awake! Awake, and Greet New Morn'
 
   }
 ]
@@ -158,12 +128,9 @@ function populateTracks(track, div, folder) {
   })
 }
 
-populateTracks(mp, mpDiv, 'missa-pacem');
-populateTracks(a4c, a4cDiv, 'a4c');
-populateTracks(ce, ceDiv, 'christmas-eve');
-populateTracks(mm, mmDiv, 'midnight');
-populateTracks(cd, cdDiv, 'christmas-day');
-populateTracks(hf, hfDiv, 'holy-family');
+
+populateTracks(aa1, aa1Div, 'aa1');
+populateTracks(ml, mlDiv, 'ml');
 
 
 $('.audio-control').on("play", function () {
