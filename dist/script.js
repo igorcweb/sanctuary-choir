@@ -59,7 +59,7 @@ const mp = [
 
 const hfDiv = $(".hf.music");
 
-const hf = [];
+const hf = [{ title: "Once in Royal David’s City" }];
 
 const mmgDiv = $(".mmg.music");
 
