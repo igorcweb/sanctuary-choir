@@ -1,117 +1,125 @@
 function activate() {
-  $.each($('.selection'), function (i, selection) {
-    if ($(selection).hasClass('active')) {
-      $(selection).find('.fa-hand-pointer-o').addClass('d-none')
-      $(selection).find('.fa-check').removeClass('d-none')
+  $.each($(".selection"), function (i, selection) {
+    if ($(selection).hasClass("active")) {
+      $(selection).find(".fa-hand-pointer-o").addClass("d-none");
+      $(selection).find(".fa-check").removeClass("d-none");
     }
-  })
+  });
 }
 
 activate();
 
-$('.selection').on('click', function () {
+$(".selection").on("click", function () {
   $("a").removeClass("active");
   $(this).addClass("active");
-  $('.selection').find('.fa-hand-pointer-o').removeClass('d-none')
-  $('.selection').find('.fa-check').addClass('d-none')
+  $(".selection").find(".fa-hand-pointer-o").removeClass("d-none");
+  $(".selection").find(".fa-check").addClass("d-none");
   activate();
   $(".music").addClass("d-none");
-  if ($(this).hasClass('ml')) {
-    $("#ml").removeClass("d-none");
-  } else if ($(this).hasClass('aa1')) {
-    $("#aa1").removeClass("d-none");
+  if ($(this).hasClass("mp")) {
+    $("#mp").removeClass("d-none");
+  } else if ($(this).hasClass("mmg")) {
+    $("#mmg").removeClass("d-none");
+  } else if ($(this).hasClass("hf")) {
+    $("#hf").removeClass("d-none");
   }
-  $('audio').each(function () {
-    $(this)[0].pause()
+  $("audio").each(function () {
+    $(this)[0].pause();
     $(this)[0].currentTime = 0;
-  })
-})
+  });
+});
 
-$(document).on('mouseover', '.selection', function () {
-  $(this).find('.fa-hand-pointer-o').addClass('hover');
-})
+$(document).on("mouseover", ".selection", function () {
+  $(this).find(".fa-hand-pointer-o").addClass("hover");
+});
 
-$(document).on('mouseout', '.selection', function () {
-  $(this).find('.fa-hand-pointer-o').removeClass('hover');
-})
+$(document).on("mouseout", ".selection", function () {
+  $(this).find(".fa-hand-pointer-o").removeClass("hover");
+});
 
-// const mpDiv = $('.mp.music');
+const mpDiv = $(".mp.music");
 
-// const mp = [
+const mp = [
+  {
+    title: "Penitential Act",
+  },
+  {
+    title: "Gloria",
+  },
+  {
+    title: "Holy",
+  },
+  {
+    title: "When We Eat This Bread",
+  },
+  {
+    title: "Lamb of God",
+  },
+];
+
+const hfDiv = $(".hf.music");
+
+const hf = [];
+
+const mmgDiv = $(".mmg.music");
+
+const mmg = [{ title: "I Sing a Maid" }];
+
+// const mlDiv = $('.ml.music');
+// const ml = [
 //   {
-//     title: 'Penitential Act'
+//     title: 'Kyrie',
 //   },
 //   {
-//     title: 'Gloria'
+//     title: 'Holy',
 //   },
 //   {
-//     title: 'Holy'
+//     title: 'Save Us Savior',
 //   },
 //   {
-//     title: 'When We Eat This Bread'
-//   },
-//   {
-//     title: 'Lamb of God'
+//     title: 'Lamb of God',
 //   },
 // ]
 
-const mlDiv = $('.ml.music');
-const ml = [
-  {
-    title: 'Kyrie',
-  },
-  {
-    title: 'Holy',
-  },
-  {
-    title: 'Save Us Savior',
-  },
-  {
-    title: 'Lamb of God',
-  },
-]
-
-const aa1Div = $('.aa1.music');
+const aa1Div = $(".aa1.music");
 const aa1 = [
   {
-    title: 'The King Shall Come When Morning Dawns'
+    title: "The King Shall Come When Morning Dawns",
   },
   {
-    title: 'Psalm 122: Let Us Go Rejoicing'
+    title: "Psalm 122: Let Us Go Rejoicing",
   },
   {
-    title: 'Gospel Acclamation'
+    title: "Gospel Acclamation",
   },
   {
-    title: 'Bread of Life'
+    title: "Bread of Life",
   },
   {
-    title: 'Creator of the Stars of Night'
+    title: "Creator of the Stars of Night",
   },
 
   {
-    title: 'Awake! Awake, and Greet New Morn'
-
-  }
-]
-
+    title: "Awake! Awake, and Greet New Morn",
+  },
+];
 
 function populateTracks(track, div, folder) {
   $.each(track, (i, track) => {
     let fileName = track.title
-      .replaceAll(',', '')
-      .replaceAll(':', '')
-      .replaceAll('!', '')
-      .replaceAll("’", '')
-      .replaceAll(' ', '-')
-      .replaceAll('(', '')
-      .replaceAll(')', '')
+      .replaceAll(",", "")
+      .replaceAll(":", "")
+      .replaceAll("!", "")
+      .replaceAll("’", "")
+      .replaceAll(" ", "-")
+      .replaceAll("(", "")
+      .replaceAll(")", "")
       .toLowerCase();
-    if (track.title === 'Gospel Acclamation') {
-      fileName = `gospel-acc-${folder}`
+    if (track.title === "Gospel Acclamation") {
+      fileName = `gospel-acc-${folder}`;
     }
-    if (track.title === 'Here I Am, Lord') {
-      fileName = `here-i-am-lord-ward`
+    if (track.title === "Here I Am, Lord") {
+      fileName = `here-i-am-lord-ward`;
     }
     const file = `./audio/${folder}/${fileName}.m4a`;
     $(div).append(`
@@ -125,29 +133,19 @@ function populateTracks(track, div, folder) {
       </audio>
     </div>
     `);
-  })
+  });
 }
 
+populateTracks(aa1, aa1Div, "aa1");
+populateTracks(mp, mpDiv, "missa-pacem");
+populateTracks(hf, hfDiv, "holy-family");
+populateTracks(mmg, mmgDiv, "mary-mother-of-god");
 
-populateTracks(aa1, aa1Div, 'aa1');
-populateTracks(ml, mlDiv, 'ml');
-
-
-$('.audio-control').on("play", function () {
-  $(".audio-control").not(this).each(function (index, audio) {
-    audio.pause()
-    audio.currentTime = 0
-  });
+$(".audio-control").on("play", function () {
+  $(".audio-control")
+    .not(this)
+    .each(function (index, audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
