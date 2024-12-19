@@ -59,11 +59,25 @@ const mp = [
 
 const hfDiv = $(".hf.music");
 
-const hf = [{ title: "Once in Royal David’s City" }];
+const hf = [
+  { title: "Once in Royal David’s City" },
+  { title: "Psalm 128: Blest Are Those Who Love You" },
+  { title: "Gospel Acclamation" },
+  { title: "What Child Is This" },
+  { title: "Child of Mercy" },
+  { title: "Angels We Have Heard on High" },
+];
 
 const mmgDiv = $(".mmg.music");
 
-const mmg = [{ title: "I Sing a Maid" }];
+const mmg = [
+  { title: "Hark! the Herald Angels Sing" },
+  { title: "Psalm 67: May God Bless Us in His Mercy" },
+  { title: "Gospel Acclamation" },
+  { title: "I Sing a Maid" },
+  { title: "Child of Mercy" },
+  { title: "Sing of Mary, Pure and Lowly" },
+];
 
 // const mlDiv = $('.ml.music');
 // const ml = [
