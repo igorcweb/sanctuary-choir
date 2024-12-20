@@ -22,6 +22,8 @@ $(".selection").on("click", function () {
     $("#mmg").removeClass("d-none");
   } else if ($(this).hasClass("hf")) {
     $("#hf").removeClass("d-none");
+  } else if ($(this).hasClass("epiphany")) {
+    $("#epiphany").removeClass("d-none");
   }
   $("audio").each(function () {
     $(this)[0].pause();
@@ -66,6 +68,16 @@ const hf = [
   { title: "What Child Is This" },
   { title: "Child of Mercy" },
   { title: "Angels We Have Heard on High" },
+];
+
+const epiphanyDiv = $(".epiphany.music");
+const epiphany = [
+  { title: "Epiphany Carol" },
+  { title: "Psalm 72: Lord, Every Nation" },
+  { title: "Gospel Acclamation" },
+  { title: "The First Nowell" },
+  { title: "We Three Kings of Orient Are" },
+  { title: "Song of Thankfulness and Praise" },
 ];
 
 const mmgDiv = $(".mmg.music");
@@ -150,10 +162,11 @@ function populateTracks(track, div, folder) {
   });
 }
 
-populateTracks(aa1, aa1Div, "aa1");
+// populateTracks(aa1, aa1Div, "aa1");
 populateTracks(mp, mpDiv, "missa-pacem");
 populateTracks(hf, hfDiv, "holy-family");
 populateTracks(mmg, mmgDiv, "mary-mother-of-god");
+populateTracks(epiphany, epiphanyDiv, "epiphany");
 
 $(".audio-control").on("play", function () {
   $(".audio-control")
