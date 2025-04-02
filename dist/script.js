@@ -22,6 +22,8 @@ $(".selection").on("click", function () {
     $("#ps").removeClass("d-none");
   } else if ($(this).hasClass("easter")) {
     $("#easter").removeClass("d-none");
+  } else if ($(this).hasClass("cm")) {
+    $("#cm").removeClass("d-none");
   }
   $("audio").each(function () {
     $(this)[0].pause();
@@ -51,6 +53,23 @@ const mp = [
   },
   {
     title: "When We Eat This Bread",
+  },
+  {
+    title: "Lamb of God",
+  },
+];
+
+const cmDiv = $(".cm.music");
+
+const cm = [
+  {
+    title: "Lord Have Mercy",
+  },
+  {
+    title: "Holy",
+  },
+  {
+    title: "We Proclaim Your Death O Lord",
   },
   {
     title: "Lamb of God",
@@ -87,6 +106,9 @@ const easter = [
     title: "Psalm 118: This Is the Day the Lord Has Made",
   },
   {
+    title: "Easter Sequence, Gospel Acclamation",
+  },
+  {
     title: "Christ the Lord",
   },
   {
@@ -107,6 +129,7 @@ function populateTracks(track, div, folder) {
       .replaceAll(" ", "-")
       .replaceAll("(", "")
       .replaceAll(")", "")
+      .replaceAll("&", "")
       .toLowerCase();
     if (track.title === "Gospel Acclamation") {
       fileName = `gospel-acc-${folder}`;
@@ -129,8 +152,9 @@ function populateTracks(track, div, folder) {
   });
 }
 
-// populateTracks(aa1, aa1Div, "aa1");
+
 populateTracks(mp, mpDiv, "missa-pacem");
+populateTracks(cm, cmDiv, "english-chant-mass");
 populateTracks(ps, psDiv, "palm-sunday");
 populateTracks(easter, easterDiv, "easter-sunday");
 
