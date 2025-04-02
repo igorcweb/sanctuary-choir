@@ -18,12 +18,10 @@ $(".selection").on("click", function () {
   $(".music").addClass("d-none");
   if ($(this).hasClass("mp")) {
     $("#mp").removeClass("d-none");
-  } else if ($(this).hasClass("mmg")) {
-    $("#mmg").removeClass("d-none");
-  } else if ($(this).hasClass("hf")) {
-    $("#hf").removeClass("d-none");
-  } else if ($(this).hasClass("epiphany")) {
-    $("#epiphany").removeClass("d-none");
+  } else if ($(this).hasClass("ps")) {
+    $("#ps").removeClass("d-none");
+  } else if ($(this).hasClass("easter")) {
+    $("#easter").removeClass("d-none");
   }
   $("audio").each(function () {
     $(this)[0].pause();
@@ -59,74 +57,43 @@ const mp = [
   },
 ];
 
-const hfDiv = $(".hf.music");
+const psDiv = $(".ps.music");
 
-const hf = [
-  { title: "Once in Royal David’s City" },
-  { title: "Psalm 128: Blest Are Those Who Love You" },
-  { title: "Gospel Acclamation" },
-  { title: "What Child Is This" },
-  { title: "Child of Mercy" },
-  { title: "Angels We Have Heard on High" },
+const ps = [
+  {
+    title: "All Glory Laud and Honor",
+  },
+  {
+    title: "Psalm 22: My God, My God",
+  },
+  {
+    title: "Only This I Want",
+  },
+  {
+    title: "Lift High the Cross",
+  },
 ];
 
-const epiphanyDiv = $(".epiphany.music");
-const epiphany = [
-  { title: "Epiphany Carol" },
-  { title: "Psalm 72: Lord, Every Nation" },
-  { title: "Gospel Acclamation" },
-  { title: "The First Nowell" },
-  { title: "We Three Kings of Orient Are" },
-  { title: "Song of Thankfulness and Praise" },
-];
+const easterDiv = $(".easter.music");
 
-const mmgDiv = $(".mmg.music");
-
-const mmg = [
-  { title: "Hark! the Herald Angels Sing" },
-  { title: "Psalm 67: May God Bless Us in His Mercy" },
-  { title: "Gospel Acclamation" },
-  { title: "I Sing a Maid" },
-  { title: "Child of Mercy" },
-  { title: "Sing of Mary, Pure and Lowly" },
-];
-
-// const mlDiv = $('.ml.music');
-// const ml = [
-//   {
-//     title: 'Kyrie',
-//   },
-//   {
-//     title: 'Holy',
-//   },
-//   {
-//     title: 'Save Us Savior',
-//   },
-//   {
-//     title: 'Lamb of God',
-//   },
-// ]
-
-const aa1Div = $(".aa1.music");
-const aa1 = [
+const easter = [
   {
-    title: "The King Shall Come When Morning Dawns",
+    title: "Christ the Lord Is Risen Today",
   },
   {
-    title: "Psalm 122: Let Us Go Rejoicing",
+    title: "Song over the Waters",
   },
   {
-    title: "Gospel Acclamation",
+    title: "Psalm 118: This Is the Day the Lord Has Made",
   },
   {
-    title: "Bread of Life",
+    title: "Christ the Lord",
   },
   {
-    title: "Creator of the Stars of Night",
+    title: "O Sacrament Most Holy",
   },
-
   {
-    title: "Awake! Awake, and Greet New Morn",
+    title: "Jesus Christ Is Risen Today",
   },
 ];
 
@@ -164,9 +131,8 @@ function populateTracks(track, div, folder) {
 
 // populateTracks(aa1, aa1Div, "aa1");
 populateTracks(mp, mpDiv, "missa-pacem");
-populateTracks(hf, hfDiv, "holy-family");
-populateTracks(mmg, mmgDiv, "mary-mother-of-god");
-populateTracks(epiphany, epiphanyDiv, "epiphany");
+populateTracks(ps, psDiv, "palm-sunday");
+populateTracks(easter, easterDiv, "easter-sunday");
 
 $(".audio-control").on("play", function () {
   $(".audio-control")
