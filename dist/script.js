@@ -89,7 +89,7 @@ const ps = [
     title: "Only This I Want",
   },
   {
-    title: "Let All Mortal Souls Be Silent",
+    title: "What Wondrous Love Is This",
   },
   {
     title: "Lift High the Cross",
