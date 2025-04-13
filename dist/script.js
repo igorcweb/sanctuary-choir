@@ -39,62 +39,62 @@ $(document).on("mouseout", ".selection", function () {
   $(this).find(".fa-hand-pointer-o").removeClass("hover");
 });
 
-const mpDiv = $(".mp.music");
+// const mpDiv = $(".mp.music");
 
-const mp = [
-  {
-    title: "Penitential Act",
-  },
-  {
-    title: "Gloria",
-  },
-  {
-    title: "Holy",
-  },
-  {
-    title: "When We Eat This Bread",
-  },
-  {
-    title: "Lamb of God",
-  },
-];
+// const mp = [
+//   {
+//     title: "Penitential Act",
+//   },
+//   {
+//     title: "Gloria",
+//   },
+//   {
+//     title: "Holy",
+//   },
+//   {
+//     title: "When We Eat This Bread",
+//   },
+//   {
+//     title: "Lamb of God",
+//   },
+// ];
 
-const cmDiv = $(".cm.music");
+// const cmDiv = $(".cm.music");
 
-const cm = [
-  {
-    title: "Lord Have Mercy",
-  },
-  {
-    title: "Holy",
-  },
-  {
-    title: "We Proclaim Your Death O Lord",
-  },
-  {
-    title: "Lamb of God",
-  },
-];
+// const cm = [
+//   {
+//     title: "Lord Have Mercy",
+//   },
+//   {
+//     title: "Holy",
+//   },
+//   {
+//     title: "We Proclaim Your Death O Lord",
+//   },
+//   {
+//     title: "Lamb of God",
+//   },
+// ];
 
-const psDiv = $(".ps.music");
+// const psDiv = $(".ps.music");
 
-const ps = [
-  {
-    title: "All Glory Laud and Honor",
-  },
-  {
-    title: "Psalm 22: My God, My God",
-  },
-  {
-    title: "Only This I Want",
-  },
-  {
-    title: "What Wondrous Love Is This",
-  },
-  {
-    title: "Lift High the Cross",
-  },
-];
+// const ps = [
+//   {
+//     title: "All Glory Laud and Honor",
+//   },
+//   {
+//     title: "Psalm 22: My God, My God",
+//   },
+//   {
+//     title: "Only This I Want",
+//   },
+//   {
+//     title: "What Wondrous Love Is This",
+//   },
+//   {
+//     title: "Lift High the Cross",
+//   },
+// ];
 
 const easterDiv = $(".easter.music");
 
@@ -106,6 +106,9 @@ const easter = [
     title: "Song over the Waters",
   },
   {
+    title: "Gloria",
+  },
+  {
     title: "Psalm 118: This Is the Day the Lord Has Made",
   },
   {
@@ -113,6 +116,16 @@ const easter = [
   },
   {
     title: "Christ the Lord",
+  },
+  {
+    title: "Holy",
+  },
+  
+  {
+    title: "When We Eat This Bread",
+  },
+  {
+    title: "Lamb of God",
   },
   {
     title: "O Sacrament Most Holy",
@@ -156,9 +169,9 @@ function populateTracks(track, div, folder) {
 }
 
 
-populateTracks(mp, mpDiv, "missa-pacem");
-populateTracks(cm, cmDiv, "english-chant-mass");
-populateTracks(ps, psDiv, "palm-sunday");
+// populateTracks(mp, mpDiv, "missa-pacem");
+// populateTracks(cm, cmDiv, "english-chant-mass");
+// populateTracks(ps, psDiv, "palm-sunday");
 populateTracks(easter, easterDiv, "easter-sunday");
 
 $(".audio-control").on("play", function () {
